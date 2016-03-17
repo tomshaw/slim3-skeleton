@@ -1,18 +1,344 @@
-body {
-    margin: 50px 0 0 0;
-    padding: 0;
-    width: 100%;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-align: center;
-    color: #aaa;
-    font-size: 18px;
+/* ==========================================================================
+Variables
+========================================================================== */
+/**
+ * Colors
+ */
+/**
+ * Backgrounds
+ */
+/**
+ * Breakpoints
+ */
+/********************
+ Mixins
+*********************/
+/**
+ * Super simple rotate element
+ */
+/**
+ * Super light grid.
+ */
+/**
+ * rem fallback - credits: http://zerosixthree.se/
+ */
+/**
+ * center vertically and/or horizontally an absolute positioned element
+ */
+/**
+ * border radius
+ */
+/**
+ * antialiasing mode font rendering
+ */
+/*  
+ * @mixin cover-background() 
+ * 
+ * --Parameters:
+ * 
+ * $img: URI of image you want to use as the background 
+ * 
+ * --Optional:
+ * $background-top:  Defaults to "center - sets the "top" value of the background position
+ * $background-left: Defaults to "center - sets the "left" value of the background position.
+ * $background-attachment: Defaults to "fixed" - allows you to specify background attachment.
+ */
+/**
+ * Maintain Aspect Ratio Mixin
+ * @see http://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+ */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
 }
 
-h1 {
-    color: #719e40;
-    letter-spacing: -3px;
-    font-family: 'Lato', sans-serif;
-    font-size: 100px;
-    font-weight: 200;
-    margin-bottom: 0;
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "OpenSansRegular", Helvetica, Arial, sans-serif;
+  color: rgba(0, 0, 0, 0.9);
+  background: #fff;
+  min-height: 100%;
+  overflow-x: hidden;
+  -ms-overflow-style: scrollbar;
+  -webkit-font-kerning: normal;
+  font-kerning: normal;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body:after {
+  display: none !important;
+  content: "BASE";
+}
+
+@media only screen and (min-width: 320px) {
+  body:after {
+    content: "XS";
+  }
+}
+@media only screen and (min-width: 480px) {
+  body:after {
+    content: "SM";
+  }
+}
+@media only screen and (min-width: 768px) {
+  body:after {
+    content: "MD";
+  }
+}
+@media only screen and (min-width: 992px) {
+  body:after {
+    content: "LG";
+  }
+}
+@media only screen and (min-width: 1200px) {
+  body:after {
+    content: "XL";
+  }
+}
+/* ==========================================================================
+General Typography
+========================================================================== */
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  color: #000;
+  line-height: 1.4;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+  text-transform: uppercase;
+}
+
+h1, .h1 {
+  font-size: 28px;
+}
+
+h2, .h2 {
+  font-size: 24px;
+}
+
+h3, .h3 {
+  font-size: 18px;
+}
+
+h4, .h4 {
+  font-size: 16px;
+}
+
+h5, .h5 {
+  font-size: 14px;
+}
+
+h6, .h6 {
+  font-size: 12px;
+}
+
+a,
+a:focus,
+a:hover,
+a:active {
+  outline: 0;
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+}
+
+p {
+  padding: 20px 0;
+}
+@media screen and (min-width: 320px) {
+  p {
+    font-size: 15px;
+    line-height: 1.3;
+  }
+}
+@media screen and (min-width: 480px) {
+  p {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+}
+@media screen and (min-width: 992px) {
+  p {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
+
+ol, ul {
+  list-style: none;
+}
+@media screen and (min-width: 320px) {
+  ol, ul {
+    font-size: 15px;
+    line-height: 1.3;
+  }
+}
+@media screen and (min-width: 480px) {
+  ol, ul {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  ol, ul {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+}
+@media screen and (min-width: 992px) {
+  ol, ul {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  ol, ul {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+hr.hr {
+  dislay: block;
+  border: 0;
+  width: 24px;
+  height: 1px;
+  background: #041936;
+  margin: 2.1875em auto;
+}
+
+/* ==========================================================================
+Wrapper
+========================================================================== */
+.wrapper {
+  background: #fff;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ==========================================================================
+Cover/Overlay
+========================================================================== */
+.cover {
+  packground-position: center center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #fff;
+  height: 100% !important;
+  width: 100% !important;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  -webkit-transition: 1s all ease-out;
+  -moz-transition: 1s all ease-out;
+  -ms-transition: 1s all ease-out;
+  -o-transition: 1s all ease-out;
+  transition: 1s all ease-out;
+}
+
+/* ==========================================================================
+Section Hero
+========================================================================== */
+.section-hero {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  z-index: 1;
+}
+.section-hero:before, .section-hero:after {
+  content: " ";
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+.section-hero:after {
+  clear: both;
+}
+.section-hero .row {
+  height: 100%;
+}
+.section-hero .hero-wrap {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+.section-hero .hero-copy {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  padding: 20px;
+}
+.section-hero .hero-copy h1 {
+  display: block;
+  font-family: "OpenSansRegular", Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+  line-height: 1;
+}
+
+/* ==========================================================================
+Hero h5/h6
+========================================================================== */
+@media (min-width: 480px) {
+  .section-hero .hero-copy h1 {
+    font-size: 3em;
+  }
+}
+@media (min-width: 768px) {
+  .section-hero .hero-copy h1 {
+    font-size: 4em;
+  }
+}
+@media (min-width: 992px) {
+  .section-hero .hero-copy h1 {
+    font-size: 5em;
+  }
+}
+@media (min-width: 1200px) {
+  .section-hero .hero-copy h1 {
+    font-size: 5em;
+  }
 }

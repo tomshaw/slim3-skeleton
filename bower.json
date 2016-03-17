@@ -1,0 +1,44 @@
+{
+  "name": "socialcomposition",
+  "authors": [
+    "Tom Shaw <tom@dallasdesign.biz>"
+  ],
+  "description": "Social Composition Business",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.0",
+    "modernizr": "~2.8.3",
+    "backbone": "^1.2.3",
+    "underscore": "^1.8.3",
+    "requirejs": "^2.1.22",
+    "es6-promise": "^3.0.2",
+    "swipebox": "^1.4.1",
+    "handlebars": "^4.0.5",
+    "font-awesome": "^4.5.0",
+    "bootstrap": "^3.3.6",
+    "superslides": "^0.6.2",
+    "imagesloaded": "^4.1.0",
+    "isotope": "^2.2.2",
+    "isotope-packery": "^1.1.3",
+    "wow": "^1.1.2",
+    "owl.carousel": "^2.0.0-beta.3",
+    "smoothscroll-for-websites": "^1.4.4",
+    "gmaps": "^0.4.22",
+    "flickity": "^1.1.2",
+    "PreloadJS": "createjs-preloadjs#^0.6.2",
+    "SoundJS": "createjs-soundjs#^0.6.2",
+    "jquery-validation": "^1.15.0",
+    "jquery.maskedinput": "^1.4.1"
+  }
+}
