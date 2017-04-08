@@ -23,9 +23,7 @@ var App = {};
         }
 
         if ($('#audioElement').length) {
-        	if (!Modernizr.touch) {
-        		SoundCloud = new App.SoundCloud($('#audioElement').get(0)); 
-        	}
+        	SoundCloud = new App.SoundCloud($('#audioElement').get(0)); 
         }
 
     }

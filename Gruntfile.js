@@ -57,7 +57,8 @@ module.exports = function (grunt) {
           'public/vendor/jquery/dist/jquery.js',
           'public/vendor/bootstrap/dist/js/bootstrap.js',
           'public/vendor/modernizr/modernizr.js',
-          'public/vendor/es6-promise/promise.js',          
+          'public/vendor/es6-promise/es6-promise.js',
+          'public/vendor/fastclick/lib/fastclick.js',    
           'public/scripts/app.js'
         ],
         dest: 'public/js/script.js'

@@ -39,6 +39,7 @@
     "PreloadJS": "createjs-preloadjs#^0.6.2",
     "SoundJS": "createjs-soundjs#^0.6.2",
     "jquery-validation": "^1.15.0",
-    "jquery.maskedinput": "^1.4.1"
+    "jquery.maskedinput": "^1.4.1",
+    "fastclick": "^1.0.6"
   }
 }
